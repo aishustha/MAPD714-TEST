@@ -9,14 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var TitleName: UITextField!
     @IBOutlet weak var TitleNameDisplay: UILabel!
     
-    //list name textfield
-    @IBOutlet weak var ListItemName: UITextField!
+    @IBAction func AddBtn(_ sender: UIButton) {
+        TitleNameDisplay.text = TitleName.text
+        TitleName.text = ""
+    }
     
-    //list item
+    //listitems
     @IBOutlet weak var ListItem1: UITextField!
     @IBOutlet weak var ListItem2: UITextField!
     @IBOutlet weak var ListItem3: UITextField!
@@ -30,27 +31,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var Quantity4: UITextField!
     @IBOutlet weak var Quantity5: UITextField!
     
+    //stepper
     @IBOutlet weak var Stepper1: UIStepper!
     @IBOutlet weak var Stepper2: UIStepper!
     @IBOutlet weak var Stepper3: UIStepper!
     @IBOutlet weak var Stepper4: UIStepper!
     @IBOutlet weak var Stepper5: UIStepper!
     
-    @IBAction func setClick(_ sender: UIButton) {
-        TitleNameDisplay.text = TitleName.text
-        TitleName.text = ""
-    }
-       
     //stepper handler
+    
+    
     @IBAction func itemChange1(_ sender: UIStepper) {
         Quantity1.text = String(Int(sender.value))
     }
-    
-    
+   
     @IBAction func itemChange2(_ sender: UIStepper) {
         Quantity2.text = String(Int(sender.value))
     }
-   
+    
     @IBAction func itemChange3(_ sender: UIStepper) {
         Quantity3.text = String(Int(sender.value))
     }
@@ -58,14 +56,13 @@ class ViewController: UIViewController {
     @IBAction func itemChange4(_ sender: UIStepper) {
         Quantity4.text = String(Int(sender.value))
     }
-    
+  
     @IBAction func itemChange5(_ sender: UIStepper) {
         Quantity5.text = String(Int(sender.value))
     }
-    
+   
 
-
-    @IBAction func cancelHandler(_ sender: UIButton) {
+    @IBAction func CancelBtn(_ sender: UIButton) {
         // reset quantity display
         Quantity1.text="0"
         Quantity2.text="0"
@@ -90,11 +87,12 @@ class ViewController: UIViewController {
         ListItem4.text=""
         ListItem5.text=""
     }
-    
-    
+
+   
     @IBOutlet weak var Save: UIButton!
     
     @IBOutlet weak var Cancel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

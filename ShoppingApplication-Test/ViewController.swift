@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     //textfield and label variable declaration
     @IBOutlet weak var TitleName: UITextField!
-    @IBOutlet weak var TitleNameDisplay: UILabel!
+        @IBOutlet weak var TitleNameDisplay: UILabel!
     
     //declaration of add button function
     @IBAction func AddBtn(_ sender: UIButton) {

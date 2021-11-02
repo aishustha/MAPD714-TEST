@@ -1,7 +1,13 @@
-//
+//  FileName:
 //  ViewController.swift
 //  ShoppingApplication-Test
 //
+//  Author's Name:
+//  Aishwarya Shrestha
+//  ashres15@my.centennialcollege.ca
+//
+//  Student ID:
+//  301138662
 //  Created by Aishwarya Shrestha on 2021-10-31.
 //
 
@@ -9,38 +15,38 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //textfield and label variable declaration
     @IBOutlet weak var TitleName: UITextField!
     @IBOutlet weak var TitleNameDisplay: UILabel!
     
+    //declaration of add button function
     @IBAction func AddBtn(_ sender: UIButton) {
         TitleNameDisplay.text = TitleName.text
         TitleName.text = ""
     }
     
-    //listitems
+    //listitems declaration
     @IBOutlet weak var ListItem1: UITextField!
     @IBOutlet weak var ListItem2: UITextField!
     @IBOutlet weak var ListItem3: UITextField!
     @IBOutlet weak var ListItem4: UITextField!
     @IBOutlet weak var ListItem5: UITextField!
     
-    //quantity
+    //quantity declaration
     @IBOutlet weak var Quantity1: UITextField!
     @IBOutlet weak var Quantity2: UITextField!
     @IBOutlet weak var Quantity3: UITextField!
     @IBOutlet weak var Quantity4: UITextField!
     @IBOutlet weak var Quantity5: UITextField!
     
-    //stepper
+    //stepper declaration
     @IBOutlet weak var Stepper1: UIStepper!
     @IBOutlet weak var Stepper2: UIStepper!
     @IBOutlet weak var Stepper3: UIStepper!
     @IBOutlet weak var Stepper4: UIStepper!
     @IBOutlet weak var Stepper5: UIStepper!
     
-    //stepper handler
-    
-    
+    //declartion of stepper handler function
     @IBAction func itemChange1(_ sender: UIStepper) {
         Quantity1.text = String(Int(sender.value))
     }
@@ -61,7 +67,8 @@ class ViewController: UIViewController {
         Quantity5.text = String(Int(sender.value))
     }
    
-
+    
+    //declaration of cancel button function
     @IBAction func CancelBtn(_ sender: UIButton) {
         // reset quantity display
         Quantity1.text="0"
@@ -78,7 +85,6 @@ class ViewController: UIViewController {
         Stepper5.value=0
         
         // clear input fields
-        
         TitleNameDisplay.text = "Shopping List"
         TitleName.text=""
         ListItem1.text=""
@@ -88,7 +94,7 @@ class ViewController: UIViewController {
         ListItem5.text=""
     }
 
-   
+   //declaration of save and cancel button
     @IBOutlet weak var Save: UIButton!
     
     @IBOutlet weak var Cancel: UIButton!
